@@ -1,0 +1,140 @@
+//tables and smaller
+@media (max-width: 768px) {
+    #header {
+        &__home {
+            height: 30rem;
+            .header-content {
+                padding-top: 7rem;
+            }
+            h1 {
+                font-size: 2.7rem;
+            }
+        }
+    }
+    #home__a .skills,
+    #home__b .profile,
+    #home__c .process,
+    .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #main-footer {
+        height: 7rem;
+
+        .footer-content {
+            flex-direction: column;
+            padding: 1rem;
+            height: 5rem;
+
+            .social {
+                padding-top: 1rem;
+            }
+        }
+    }
+}
+
+//mobile
+@media (max-width: 576px) {
+    #header {
+        &__home {
+            height: 10rem;
+            border-radius: 2px solid $primary-color;
+            background-position: 20% 30%;
+            .header-content {
+                display: none;
+            }
+        }
+        &__inner {
+            height: 10rem;
+        }
+    }
+    #home {
+        &__a {
+            .skills {
+                div {
+                    padding-bottom: 1rem;
+                    border-bottom: 2px solid $light-color;
+
+                    &:last-child {
+                        padding-bottom: 0;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        li {
+            padding: 1rem;
+        }
+    }
+    #home__a .skills,
+    #home__b .profile,
+    #home__c .process,
+    .items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #main-footer {
+        height: 7rem;
+
+        .footer-content {
+            flex-direction: column;
+            padding: 1rem;
+            height: 5rem;
+
+            .social {
+                padding-top: 1rem;
+            }
+        }
+    }
+
+    #about {
+        &-a {
+            .info {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        &-c {
+            display: none;
+        }
+    }
+
+    #contact {
+        &-a {
+            .form-fields {
+                grid-template-areas:
+                    "name"
+                    "email"
+                    "subject"
+                    "phone"
+                    "message"
+                    "button" !important;
+            }
+        }
+        &-b {
+            .contact-info {
+                grid-template-columns: 1fr !important;
+                div {
+                    padding-bottom: 1rem;
+                    margin-bottom: 1rem;
+                    border-bottom: 2px dotted #fff;
+
+                    &:last-child {
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+    .lead {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        word-spacing: 1px;
+    }
+}
